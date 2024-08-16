@@ -2,13 +2,13 @@ using DesignPattern.Builder.Models;
 
 namespace DesignPattern.Builder.Interfaces;
 
-public interface ISmartPhoneBuilder
+public interface ISmartphoneBuilder
 {
-    void BuildBrand();
-    void BuildScreen();
-    void BuildBattery();
-    void BuildCamera();
-    void BuildOS();
-    void BuildWaterProof();
-    Smartphone GetResult();
+    ISmartphoneBuilder BuildBrand(string brandName);
+    ISmartphoneBuilder BuildScreen(bool hasOLED);
+    ISmartphoneBuilder BuildBattery(string batteryCapacity);
+    ISmartphoneBuilder BuildCamera(int numberOfCameras);
+    ISmartphoneBuilder BuildAndroidOS(bool isAndroid);
+    ISmartphoneBuilder BuildWaterProof(bool isWaterProof);
+    Smartphone GetSmartphone();
 }

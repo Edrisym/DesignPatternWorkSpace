@@ -1,18 +1,30 @@
-﻿
+﻿var builder = new SmartphoneBuilder();
+var director = new SmartphoneDirector(builder);
 
-ISmartPhoneBuilder AndroidBuilder = new ConcreteAndroidPhoneBuilder();
-SmartPhoneDirector director1 = new SmartPhoneDirector(AndroidBuilder);
+var applePhone = director.ConstructApplePhone();
+var line = "--------------------------------------------------------------------------------------------------------------------";
+Console.WriteLine(line);
+Console.WriteLine(applePhone);
 
-director1.ConstructSmartphone();
-Smartphone androidSmartphone = AndroidBuilder.GetResult();
-Console.WriteLine(androidSmartphone);
+builder.Reset();
 
 
-ISmartPhoneBuilder smartPhoneBuilder = new ConcreteApplePhoneBuilder();
-SmartPhoneDirector director = new SmartPhoneDirector(smartPhoneBuilder);
+var androidPhone = director.ConstructAndroidPhone();
+Console.WriteLine(line);
+Console.WriteLine(androidPhone);
 
-director.ConstructSmartphone();
-Smartphone appleSmartphone = smartPhoneBuilder.GetResult();
-Console.WriteLine(appleSmartphone);
+builder.Reset();
+
+var customPhone = builder.BuildBattery("6000mAh")
+                                    .BuildBrand("Samsung")
+                                    .BuildCamera(4)
+                                    .BuildScreen(true)  
+                                    .BuildAndroidOS(true)
+                                    .BuildWaterProof(true)
+                                    .GetSmartphone();
+
+Console.WriteLine(line);
+Console.WriteLine(customPhone);
+Console.WriteLine(line);
 
 Console.Read();
