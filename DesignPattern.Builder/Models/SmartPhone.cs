@@ -19,17 +19,9 @@ public class Smartphone
             (NumberOfCamera.Equals(1) ? $" {NumberOfCamera} camera " : $" {NumberOfCamera} cameras") +
             (IsWaterProof ? ",not water resistant" : ", water resistant") +
             " and the OS is " + (IsIOS ? "iOS" : "Android");
-
-        // return $"Smartphone Details:\n" +
-        //        $"- Brand Name: {BrandName}\n" +
-        //        $"- Screen: {HasScreenOLED}\n" +
-        // $"- Battery: {Battery}\n" +
-        // // $"- Camera: {NumberOfCamera}\n" +
-        // $"- Operating System: {IsIOS}\n" +
-        //     $"- Water Proof: {IsWaterProof}";
     }
 
-    public static bool StartsWithVowel(string input)
+    private static bool StartsWithVowel(string input)
     {
         if (string.IsNullOrEmpty(input))
         {

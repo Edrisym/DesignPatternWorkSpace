@@ -1,6 +1,3 @@
-using DesignPattern.Builder.Interfaces;
-using DesignPattern.Builder.Models;
-
 namespace DesignPattern.Builder.ConcreteBuilders;
 
 public class SmartphoneBuilder : ISmartphoneBuilder

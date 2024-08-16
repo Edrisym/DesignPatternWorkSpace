@@ -1,5 +1,3 @@
-using DesignPattern.Builder.Models;
-
 namespace DesignPattern.Builder.Interfaces;
 
 public interface ISmartphoneBuilder

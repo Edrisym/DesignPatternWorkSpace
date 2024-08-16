@@ -1,5 +1,3 @@
-using DesignPattern.Builder.Interfaces;
-
 namespace DesignPattern.Builder.Director;
 
 public class SmartphoneDirector
