@@ -1,9 +1,9 @@
 namespace DesignPattern.FactoryMethod;
 
-public class WebApplication : ISoftwareProduct
+public class WebApplication : Software
 {
-    public void Develop()
+    public override void Develop()
     {
-        Console.WriteLine("Web Application is developing!!");
+        Console.WriteLine("This software is running...");
     }
 }

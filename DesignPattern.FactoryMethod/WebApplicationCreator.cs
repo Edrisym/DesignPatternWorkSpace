@@ -1,9 +1,5 @@
 namespace DesignPattern.FactoryMethod;
-
 public class WebApplicationCreator : SoftwareCreator
 {
-    public override ISoftwareProduct CreateProduct()
-    {
-        return new WebApplication();
-    }
+    public override Software CreateProduct() => new WebApplication();
 }
