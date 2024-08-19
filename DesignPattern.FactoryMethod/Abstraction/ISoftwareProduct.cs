@@ -1,4 +1,4 @@
-namespace DesignPattern.FactoryMethod;
+namespace DesignPattern.FactoryMethod.Abstraction;
 
 public interface ISoftwareProduct
 {

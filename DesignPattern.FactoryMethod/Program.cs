@@ -1,6 +1,10 @@
-﻿using DesignPattern.FactoryMethod;
+﻿using DesignPattern.FactoryMethod.ConcreteCreators;
 
 MobileAppCreator mobileAppCreator = new MobileAppCreator();
-var software = mobileAppCreator.CreateProduct();
-Console.WriteLine(software);
+mobileAppCreator.SomeOperation();
+
+
+WebApplicationCreator webAppCreator = new WebApplicationCreator();
+webAppCreator.SomeOperation();
+
 Console.Read();
