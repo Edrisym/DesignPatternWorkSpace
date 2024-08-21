@@ -2,7 +2,7 @@
 var director = new SmartphoneDirector(builder);
 
 var applePhone = director.ConstructApplePhone();
-var line = "--------------------------------------------------------------------------------------------------------------------";
+const string line = "--------------------------------------------------------------------------------------------------------------------";
 Console.WriteLine(line);
 Console.WriteLine(applePhone);
 

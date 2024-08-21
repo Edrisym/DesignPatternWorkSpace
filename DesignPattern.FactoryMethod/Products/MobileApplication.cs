@@ -1,4 +1,3 @@
-
 using DesignPattern.FactoryMethod.Abstraction;
 
 namespace DesignPattern.FactoryMethod.Products;

@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Builder", "De
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.FactoryMethod", "DesignPattern.FactoryMethod\DesignPattern.FactoryMethod.csproj", "{3E87AB15-718C-4C66-88C9-CA087EC0FD65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern.Builder.Pizza", "DesignPattern.Builder.Pizza\DesignPattern.Builder.Pizza.csproj", "{4726CAED-E66A-4780-98AE-74FBEB088CEC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{3E87AB15-718C-4C66-88C9-CA087EC0FD65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E87AB15-718C-4C66-88C9-CA087EC0FD65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E87AB15-718C-4C66-88C9-CA087EC0FD65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4726CAED-E66A-4780-98AE-74FBEB088CEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4726CAED-E66A-4780-98AE-74FBEB088CEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4726CAED-E66A-4780-98AE-74FBEB088CEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4726CAED-E66A-4780-98AE-74FBEB088CEC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
