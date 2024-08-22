@@ -20,16 +20,4 @@ public class Pizza
             $"{(IsSpicy ? "and is spicy" : "and is not spicy")}.";
 
     }
-
-    private static bool StartsWithVowel(string input)
-    {
-        if (string.IsNullOrEmpty(input))
-        {
-            return false;
-        }
-
-        char firstChar = char.ToLower(input[0]);
-
-        return "aeiou".Contains(firstChar);
-    }
 }

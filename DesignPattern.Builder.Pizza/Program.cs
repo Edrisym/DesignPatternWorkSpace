@@ -1,10 +1,11 @@
-﻿using DesignPattern.Builder.Pizza.ConcreteBuilders;
+﻿using DesignPattern.Builder.Pizza;
+using DesignPattern.Builder.Pizza.ConcreteBuilders;
 using DesignPattern.Builder.Pizza.Director;
 
-var builder = new PizzaToppingBuilder();
-var director = new PizzaDirector(builder);
+PizzaToppingBuilder builder = new PizzaToppingBuilder();
+PizzaDirector director = new PizzaDirector(builder);
 
-var pizz_Order_1 = director.MakePizzaOrder_1();
+Pizza pizz_Order_1 = director.MakePizzaOrder_1();
 const string line = "--------------------------------------------------------------------------------------------------------------------";
 Console.WriteLine(line);
 Console.WriteLine(pizz_Order_1);
