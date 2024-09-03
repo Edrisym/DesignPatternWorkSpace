@@ -1,21 +1,19 @@
 ﻿using DesignPattern.Observer;
 
-public class Program
-{
-    public static void Main()
-    {
-        var publisher = new Publisher();
+var publisher = new Publisher();
 
-        var subscriber1 = new Subscriber1();
-        var subscriber2 = new Subscriber2();
+var subscriber1 = new Subscriber1();
+var subscriber2 = new Subscriber2();
 
-        publisher.Subscribe(subscriber1);
-        publisher.Subscribe(subscriber2);
+    publisher.Subscribe(subscriber1.Update);
+    publisher.Subscribe(subscriber2.Update);
 
-        publisher.PublishPost("New post");
+    // publisher.OnNotify += subscriber1.Update;
+    // publisher.OnNotify += subscriber2.Update;
 
-        publisher.UnSubscribe(subscriber1);
-
-        publisher.PublishPost("New post");
-    }
-}
+    //
+    publisher.PublishPost("New post published!!");
+    //
+    publisher.UnSubscribe(subscriber1.Update);
+    // // publisher.OnNotify -= subscriber1.Update;
+    publisher.PublishPost("Another post published!!");

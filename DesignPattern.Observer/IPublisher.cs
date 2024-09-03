@@ -1,9 +1,10 @@
 namespace DesignPattern.Observer;
+public delegate void Notify(string message);
 
-// The Subject
 public interface IPublisher
 {
-    void Subscribe(ISubscriber subscriber);
-    void UnSubscribe(ISubscriber subscriber);
+    event Notify OnNotify;
+    void Subscribe(Notify subscriber);
+    void UnSubscribe(Notify subscriber);
     void Notify();
 }

@@ -12,6 +12,6 @@ public class Subscriber1 : ISubscriber
 
     private void GetNotify()
     {
-        Console.WriteLine($"Subscriber1 was notified - {_state}");
+        Console.WriteLine($"Subscriber 1 was notified - {_state}");
     }
 }
