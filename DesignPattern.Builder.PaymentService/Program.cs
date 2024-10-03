@@ -1,9 +1,8 @@
-﻿namespace DesignPattern.Builder.PaymentService
-{
-    internal class Program
-    {
-        public static void Main(string[] args)
-        {
-        }
-    }
-}
+﻿using DesignPattern.Builder.PaymentService;
+
+var builder = new PaymentGatewayBuilder();
+var director = new PaymentServiceDirector(builder);
+
+var zarrinpal = director.OpenZarinpalGateway();
+
+Console.WriteLine(zarrinpal);
