@@ -4,39 +4,39 @@ public class PaymentGatewayBuilder : BasePaymentGatewayBuilder
 {
     private PaymentGateway _gateway = new();
 
-    protected override BasePaymentGatewayBuilder GatewayName(string gatewayName)
+    public override BasePaymentGatewayBuilder GatewayName(string gatewayName)
     {
         _gateway.Name = gatewayName;
         return this;
     }
 
-    protected override BasePaymentGatewayBuilder Currency(string currency)
+    public override BasePaymentGatewayBuilder Currency(string currency)
     {
         _gateway.Currency = currency;
         return this;
     }
 
-    protected override BasePaymentGatewayBuilder Amount(decimal amount)
+    public override BasePaymentGatewayBuilder Amount(decimal amount)
     {
         _gateway.Amount = amount;
         return this;
     }
 
-    protected override BasePaymentGatewayBuilder PaymentMethod(string paymentMethod)
+    public override BasePaymentGatewayBuilder PaymentMethod(string paymentMethod)
     {
         _gateway.SupportedPaymentMethod = paymentMethod;
         return this;
     }
 
-    protected override BasePaymentGatewayBuilder WebhookUrl(string url)
+    public override BasePaymentGatewayBuilder WebhookUrl(string url)
     {
         _gateway.WebhookUrl = url;
         return this;
     }
 
-    protected override BasePaymentGatewayBuilder TransactionFee(decimal fee)
+    public override BasePaymentGatewayBuilder TransactionFee()
     {
-        _gateway.TransactionFee = fee;
+        _gateway.TransactionFee = CalculateTransactionFee(_gateway.Amount);
         return this;
     }
 
@@ -49,5 +49,10 @@ public class PaymentGatewayBuilder : BasePaymentGatewayBuilder
     {
         _gateway = new();
         return this;
+    }
+
+    private decimal CalculateTransactionFee(decimal amount)
+    {
+        return amount * 0.10m;
     }
 }

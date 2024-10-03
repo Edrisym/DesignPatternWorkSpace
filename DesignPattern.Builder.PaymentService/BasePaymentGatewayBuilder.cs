@@ -2,12 +2,12 @@ namespace DesignPattern.Builder.PaymentService;
 
 public abstract class BasePaymentGatewayBuilder
 {
-    protected abstract BasePaymentGatewayBuilder GatewayName(string gatewayName);
-    protected abstract BasePaymentGatewayBuilder Currency(string currency);
-    protected abstract BasePaymentGatewayBuilder Amount(decimal amount);
-    protected abstract BasePaymentGatewayBuilder PaymentMethod(string paymentMethod);
-    protected abstract BasePaymentGatewayBuilder WebhookUrl(string url);
-    protected abstract BasePaymentGatewayBuilder TransactionFee(decimal fee);
+    public abstract BasePaymentGatewayBuilder GatewayName(string gatewayName);
+    public abstract BasePaymentGatewayBuilder Currency(string currency);
+    public abstract BasePaymentGatewayBuilder Amount(decimal amount);
+    public abstract BasePaymentGatewayBuilder PaymentMethod(string paymentMethod);
+    public abstract BasePaymentGatewayBuilder WebhookUrl(string url);
+    public abstract BasePaymentGatewayBuilder TransactionFee();
 
     public abstract PaymentGateway CreateGateway();
 }
