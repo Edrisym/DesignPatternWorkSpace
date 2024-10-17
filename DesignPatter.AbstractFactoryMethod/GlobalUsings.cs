@@ -1,0 +1,5 @@
+global using DesignPatter.AbstractFactoryMethod.AbstractProducts;
+global using DesignPatter.AbstractFactoryMethod.AbstractFactory;
+global using DesignPatter.AbstractFactoryMethod.ConcreteProducts;
+global using DesignPatter.AbstractFactoryMethod;
+global using DesignPatter.AbstractFactoryMethod.ConcreteFactory;
